@@ -1,0 +1,9 @@
+-- 1 Запрос
+select L.location_id, L.street_address, L.city, L.state_province, C.COUNTRY_NAME
+from locations L
+join departments D on L.LOCATION_ID = D.LOCATION_ID
+join countries C on L.COUNTRY_ID = C.COUNTRY_ID;
+-- 2 Запрос
+select E.FIRST_NAME, E.LAST_NAME, D.DEPARTMENT_ID, D.DEPARTMENT_NAME
+from employees E
+join departments D on E.DEPARTMENT_ID = D.DEPARTMENT_ID
